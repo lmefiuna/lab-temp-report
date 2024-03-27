@@ -1,7 +1,12 @@
-import pandas as pd
+import argparse
 from datetime import datetime
+import pandas as pd
 
-FILENAME = "RHT20 03-04-24  15.53.27.xls"
+parser = argparse.ArgumentParser()
+parser.add_argument("filename", type=str)
+args = parser.parse_args()
+
+FILENAME = args.filename
 FORMATTED_FILE = f"{FILENAME[:-4]}_formatted{FILENAME[-4:]}"
 OUTPUT_FILE = f"{FILENAME[:-4]}_processed{FILENAME[-4:]}"
 
