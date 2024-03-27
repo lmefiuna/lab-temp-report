@@ -1,0 +1,1 @@
+LOAD data INFILE '/var/lib/mysql-files/RHT20 03-26-24  16.19.05_processed.xls' INTO TABLE temp_Lab FIELDS TERMINATED by ',' ENCLOSED by '"' LINES TERMINATED by '\n' IGNORE 1 rows (@temp, @humidity,@timestamp) set Temp=@temp,RH=@humidity,Press=0,timestamp=@timestamp;
